@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #100e0e;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  font-family: 'Montserrat', sans-serif;
+  color: var(--foreground);
+}

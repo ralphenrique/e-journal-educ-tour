@@ -19,8 +19,8 @@ export default function Nav({
                 aria-label="Desktop navigation">
                 <div className="flex w-full flex-col items-start gap-4 text-left">
                     <div>
-                        <span className="text-lg font-medium">E-Journal</span>
-                        <span>ELEC014 Educational Tour</span>
+                        <div className="text-lg font-medium">E-Journal</div>
+                        <div>Educational Tour</div>
                     </div>
                 </div>
                 <ul className="flex list-none flex-col gap-4 space-y-0">

@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 
 export const metadata: Metadata = {
-  title: "E-Journal",
+  title: "Enrique E-Journal",
   description: "A simple e-journal app",
 };
 

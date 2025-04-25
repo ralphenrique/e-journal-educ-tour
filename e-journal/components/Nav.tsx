@@ -1,36 +1,44 @@
 "use client"
 import NavItem from './ui/NavItem'
-import { useRouter } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 
 
-export default function Nav() {
+export default function Nav({
+    menuLinks,
+}: {
+    menuLinks: { href: string; label: string; }[]
+}
+) {
+    const pathname = usePathname();
 
     const router = useRouter()
 
     return (
-        <>
-            <nav className="px-5">
-                <div className="w-fit mb-12 space-y-2">
-                    <h1 className='text-lg font-bold'>
-                        Educational Tour E-journal
-                    </h1>
-                    <p className='text-sm font-semibold text-neutral-400'>
-                        Ralph Kris Enrique · 2025
-                    </p>
+        <aside className={`sticky top-0 hidden h-screen w-48 py-20 md:block`}>
+            <nav className="flex h-full w-full flex-col gap-12 overflow-visible"
+                aria-label="Desktop navigation">
+                <div className="flex w-full flex-col items-start gap-4 text-left">
+                    <div>
+                        <span className="text-lg font-medium">E-Journal</span>
+                        <span>ELEC014 Educational Tour</span>
+                    </div>
                 </div>
-                <ul className="flex flex-col w-fit space-y-4">
-                    <NavItem 
-                    onClick= {() => router.push('/introduction') } label="Introduction" />
-                    <NavItem 
-                    onClick= {() => router.push('/organizers') }
-                    label="Organizers" />
-                    <NavItem label="Itinerary" />
-                    <NavItem label="Companies" />
-                    <NavItem label="Reflection" />
-                    <NavItem label="Gallery" />
-                    <NavItem label="Conclusion" />
+                <ul className="flex list-none flex-col gap-4 space-y-0">
+                    {menuLinks.map((item) => (
+                        <li key={item.href}>
+                            <NavItem
+                                label={item.label}
+                                onClick={() => router.push(item.href)}
+                                active={
+                                    item.href === "/"
+                                        ? pathname === item.href
+                                        : pathname.startsWith(item.href)
+                                }
+                            />
+                        </li>
+                    ))}
                 </ul>
             </nav>
-        </>
+        </aside>
     )
 }

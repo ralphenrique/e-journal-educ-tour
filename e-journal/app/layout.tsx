@@ -1,7 +1,13 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import './globals.css';
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import { unstable_ViewTransition as ViewTransition } from 'react';
+import { menuItems } from "@/app/menu-items";
 import Nav from "@/components/Nav";
+import NextPageButton from "@/components/ui/NextPageButton";
+import LenisProvider from './LenisProvider';
+
+const inter = Inter({ subsets: ['latin'] });
 
 
 export const metadata: Metadata = {
@@ -15,17 +21,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.className}`} >
       <body
-        className={`antialiased`}
+        className='antialiased tracking-tight'
       >
-        <div className='flex pt-24 px-96 md:px-36'>
-          <Nav />
-          <div className="flex-1 border font-bold">
-            {children}
-          </div>
+        <LenisProvider />
+        <div className="mx-auto flex min-h-screen w-full max-w-4xl gap-12 px-8">
+          <Nav menuLinks={menuItems} />
+          <main className=" h-min w-full space-y-6 my-20">
+            <ViewTransition>{children}</ViewTransition>
+            <NextPageButton />
+          </main>
         </div>
       </body>
     </html>
   );
 }
+

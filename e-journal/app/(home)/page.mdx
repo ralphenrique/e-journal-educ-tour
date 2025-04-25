@@ -1,0 +1,39 @@
+import Link from 'next/link'
+import group from './group.jpg'
+import ImageModal from '@/components/ui/ImageModal'
+
+export const metadata = {
+    title: 'Home',
+    description: 'Welcome to my e-journal for the ELEC014 Educational / Industry Tour',
+    openGraph: {
+        title: 'Home',
+        description: 'Welcome to my e-journal for the ELEC014 Educational / Industry Tour',
+        url: 'https://elec014.uic.edu.ph/',
+        siteName: 'ELEC014 E-Journal',
+        locale: 'en_US',
+        type: 'website',
+    },
+}
+
+<ImageModal 
+    src={group} 
+    alt="Group photo of the students and faculty" 
+    className="rounded-lg h-64 object-cover" 
+    style={{ objectPosition: '0% 80%' }}
+/>
+
+Welcome to my **e-journal** for the _ELEC014 Educational / Industry Tour_ — an exciting, immersive learning experience designed for students enrolled in ELEC014 at <Link href="https://www.uic.edu.ph/" className='text-uic-pink'>University of the Immaculate Conception</Link>.
+
+This year's tour took place last _April 18 - 21, 2025_, covering key locations such as Cebu IT Park, Alliance Software, and Many more to be covered. 
+
+## Goal of the CCS Educational Tour is to:
+
+- Bridge classroom theories with real-world applications.
+- Expose students to current technologies and industry practices.
+- Provide insights into future career opportunities and trends.
+- Foster professional development and networking opportunities.
+
+
+ _ELEC014_  : is a course that immerses students to the industry of Information Technology and Computer Science. It is a course that provides students with the opportunity to explore the inner workings of leading companies and institutions in the fields of software development and information technology. 
+
+

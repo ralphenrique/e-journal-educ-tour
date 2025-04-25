@@ -1,10 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme{
+  --color-high-contrast-text: #ffffff;
+  --color-low-contrast-text: #949494;
+  --color-uic-pink: #D2334C
 }
+
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -13,8 +15,10 @@
   }
 }
 
+
 body {
   background: var(--background);
-  font-family: 'Montserrat', sans-serif;
   color: var(--foreground);
+  text-rendering: optimizeLegibility;
+
 }

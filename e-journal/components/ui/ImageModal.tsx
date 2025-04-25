@@ -1,8 +1,13 @@
 'use client'
 import { useState } from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
-export default function ImageModal({ src, alt, className, style }: { src: any; alt: string; className?: string; style?: React.CSSProperties }) {
+export default function ImageModal({ src, alt, className, style }: { 
+  src: string | StaticImageData; 
+  alt: string; 
+  className?: string; 
+  style?: React.CSSProperties 
+}) {
   const [open, setOpen] = useState(false);
 
   return (

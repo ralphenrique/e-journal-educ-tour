@@ -2,12 +2,25 @@
 import { useState } from "react";
 import Image, { StaticImageData } from "next/image";
 
-export default function ImageModal({ src, alt, className, style }: { 
-  src: string | StaticImageData; 
-  alt: string; 
-  className?: string; 
-  style?: React.CSSProperties 
-}) {
+interface ImageModalProps {
+  src: string | StaticImageData;
+  alt: string;
+  className?: string;
+  style?: React.CSSProperties;
+  priority?: boolean;
+  loading?: 'lazy' | 'eager';
+  fill?: boolean;
+}
+
+export default function ImageModal({ 
+  src, 
+  alt, 
+  className, 
+  style, 
+  priority, 
+  loading,
+  fill 
+}: ImageModalProps) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -16,8 +29,11 @@ export default function ImageModal({ src, alt, className, style }: {
         src={src}
         alt={alt}
         className={className + " cursor-pointer"}
-        style={style} 
+        style={style}
         onClick={() => setOpen(true)}
+        priority={priority}
+        loading={loading}
+        fill={fill}
       />
       {open && (
         <div
@@ -38,7 +54,6 @@ export default function ImageModal({ src, alt, className, style }: {
             src={src}
             alt={alt}
             className="rounded-lg max-h-[60vh] max-w-[60vw] object-contain"
-          
             onClick={e => e.stopPropagation()}
           />
         </div>

@@ -30,127 +30,243 @@ import itpark2 from './itpark2.jpg';
 import alliance2 from './alliance2.jpg';
 import building from './building.jpg';
 
-
 > This are only a few among thousands of photos taken during the trip. 
 
 <div className="grid grid-cols-4 gap-2 auto-rows-[200px]">
-  {/* Wide landscape - Priority loading for first visible image */}
+  {/* First fold images with priority loading */}
   <div className="col-span-2 row-span-1">
-    <ImageModal src={departure} alt="Gallery image" className="rounded-lg w-full h-full object-cover" priority />
+    <ImageModal 
+      src={departure} 
+      alt="Gallery image" 
+      className="rounded-lg w-full h-full object-cover"
+      priority 
+      fill
+    />
   </div>
   
-  {/* Tall portrait - Priority loading for first visible image */}
   <div className="col-span-1 row-span-2">
-    <ImageModal src={airport} alt="Gallery image" className="rounded-lg w-full h-full object-cover" 
-      style={{ objectPosition: '10%' }} priority />
+    <ImageModal 
+      src={airport} 
+      alt="Gallery image" 
+      className="rounded-lg w-full h-full object-cover"
+      style={{ objectPosition: '10%' }} 
+      priority
+      fill
+    />
   </div>
   
-  {/* Square - Priority loading for first visible image */}
   <div className="col-span-1 row-span-1">
-    <ImageModal src={plane} alt="Gallery image" className="rounded-lg w-full h-full object-cover" priority />
+    <ImageModal 
+      src={plane} 
+      alt="Gallery image" 
+      className="rounded-lg w-full h-full object-cover"
+      priority
+      fill
+    />
   </div>
-  
-  {/* Wide landscape */}
+
+  {/* Rest of the images with lazy loading */}
   <div className="col-span-2 row-span-1">
-    <ImageModal src={bus} alt="Gallery image" className="rounded-lg w-full h-full object-cover" loading="lazy" />
+    <ImageModal 
+      src={bus} 
+      alt="Gallery image" 
+      className="rounded-lg w-full h-full object-cover"
+      loading="lazy"
+      fill
+    />
   </div>
   
-  {/* Square */}
   <div className="col-span-1 row-span-1">
-    <ImageModal src={airport2} alt="Gallery image" className="rounded-lg w-full h-full object-cover" loading="lazy" />
+    <ImageModal 
+      src={airport2} 
+      alt="Gallery image" 
+      className="rounded-lg w-full h-full object-cover"
+      loading="lazy"
+      fill
+    />
   </div>
   
-  {/* Tall portrait */}
   <div className="col-span-1 row-span-2">
-    <ImageModal src={play} alt="Gallery image" className="rounded-lg w-full h-full object-cover" loading="lazy" />
+    <ImageModal 
+      src={play} 
+      alt="Gallery image" 
+      className="rounded-lg w-full h-full object-cover"
+      loading="lazy"
+      fill
+    />
   </div>
   
-  {/* Large landscape image to fill the right side */}
   <div className="col-span-3 row-span-2">
-    <ImageModal src={itpark} alt="Gallery image" className="rounded-lg w-full h-full object-cover" loading="lazy" />
+    <ImageModal 
+      src={itpark} 
+      alt="Gallery image" 
+      className="rounded-lg w-full h-full object-cover"
+      loading="lazy"
+      fill
+    />
   </div>
 
-  {/* Full width */}
   <div className="col-span-4 row-span-1">
-    <ImageModal src={magellan} alt="Gallery image" className="rounded-lg w-full h-full object-cover"
-     style={{ objectPosition: '0% 80%' }} loading="lazy" />
+    <ImageModal 
+      src={magellan} 
+      alt="Gallery image" 
+      className="rounded-lg w-full h-full object-cover"
+      style={{ objectPosition: '0% 80%' }} 
+      loading="lazy"
+      fill
+    />
   </div>
   
-  {/* Square */}
   <div className="col-span-1 row-span-1">
-    <ImageModal src={museo3} alt="Gallery image" className="rounded-lg w-full h-full object-cover" loading="lazy" />
+    <ImageModal 
+      src={museo3} 
+      alt="Gallery image" 
+      className="rounded-lg w-full h-full object-cover"
+      loading="lazy"
+      fill
+    />
   </div>
   
-  {/* Wide landscape */}
   <div className="col-span-2 row-span-1">
-    <ImageModal src={museo2} alt="Gallery image" className="rounded-lg w-full h-full object-cover" 
-    style={{ objectPosition: '0% 90%' }} loading="lazy" />
+    <ImageModal 
+      src={museo2} 
+      alt="Gallery image" 
+      className="rounded-lg w-full h-full object-cover"
+      style={{ objectPosition: '0% 90%' }} 
+      loading="lazy"
+      fill
+    />
   </div>
   
-  {/* Square */}
   <div className="col-span-1 row-span-1">
-    <ImageModal src={museo4} alt="Gallery image" className="rounded-lg w-full h-full object-cover" loading="lazy" />
+    <ImageModal 
+      src={museo4} 
+      alt="Gallery image" 
+      className="rounded-lg w-full h-full object-cover"
+      loading="lazy"
+      fill
+    />
   </div>
   
-  {/* Tall portrait spanning 2 rows */}
   <div className="col-span-2 row-span-2">
-    <ImageModal src={cross} alt="Gallery image" className="rounded-lg w-full h-full object-cover"
-        style={{ objectPosition: '0% 0%' }} loading="lazy" />
+    <ImageModal 
+      src={cross} 
+      alt="Gallery image" 
+      className="rounded-lg w-full h-full object-cover"
+      style={{ objectPosition: '0% 0%' }} 
+      loading="lazy"
+      fill
+    />
   </div>
   
-  {/* Square */}
   <div className="col-span-1 row-span-1">
-    <ImageModal src={guitar} alt="Gallery image" className="rounded-lg w-full h-full object-cover" loading="lazy" />
+    <ImageModal 
+      src={guitar} 
+      alt="Gallery image" 
+      className="rounded-lg w-full h-full object-cover"
+      loading="lazy"
+      fill
+    />
   </div>
   
-  {/* Square */}
   <div className="col-span-1 row-span-1">
-    <ImageModal src={canon} alt="Gallery image" className="rounded-lg w-full h-full object-cover" loading="lazy" />
+    <ImageModal 
+      src={canon} 
+      alt="Gallery image" 
+      className="rounded-lg w-full h-full object-cover"
+      loading="lazy"
+      fill
+    />
   </div>
   
-  {/* Wide landscape */}
   <div className="col-span-2 row-span-1">
-    <ImageModal src={fort} alt="Gallery image" className="rounded-lg w-full h-full object-cover" loading="lazy" />
+    <ImageModal 
+      src={fort} 
+      alt="Gallery image" 
+      className="rounded-lg w-full h-full object-cover"
+      loading="lazy"
+      fill
+    />
   </div>
   
-  {/* Square */}
   <div className="col-span-1 row-span-1">
-    <ImageModal src={itpark2} alt="Gallery image" className="rounded-lg w-full h-full object-cover" loading="lazy" />
+    <ImageModal 
+      src={itpark2} 
+      alt="Gallery image" 
+      className="rounded-lg w-full h-full object-cover"
+      loading="lazy"
+      fill
+    />
   </div>
   
-  {/* Fill gap with square */}
   <div className="col-span-1 row-span-1">
-    <ImageModal src={alliance2} alt="Gallery image" className="rounded-lg w-full h-full object-cover" loading="lazy" />
+    <ImageModal 
+      src={alliance2} 
+      alt="Gallery image" 
+      className="rounded-lg w-full h-full object-cover"
+      loading="lazy"
+      fill
+    />
   </div>
   
-  {/* Fill gap with landscape */}
   <div className="col-span-2 row-span-1">
-    <ImageModal src={goteam} alt="Gallery image" className="rounded-lg w-full h-full object-cover" loading="lazy" />
+    <ImageModal 
+      src={goteam} 
+      alt="Gallery image" 
+      className="rounded-lg w-full h-full object-cover"
+      loading="lazy"
+      fill
+    />
   </div>
   
-  {/* Fill gap with tall portrait */}
   <div className="col-span-1 row-span-2">
-    <ImageModal src={building} alt="Gallery image" className="rounded-lg w-full h-full object-cover" loading="lazy" />
+    <ImageModal 
+      src={building} 
+      alt="Gallery image" 
+      className="rounded-lg w-full h-full object-cover"
+      loading="lazy"
+      fill
+    />
   </div>
 
-  {/* Fill remaining space */}
   <div className="col-span-2 row-span-1">
-    <ImageModal src={alliance} alt="Gallery image" className="rounded-lg w-full h-full object-cover" loading="lazy" />
+    <ImageModal 
+      src={alliance} 
+      alt="Gallery image" 
+      className="rounded-lg w-full h-full object-cover"
+      loading="lazy"
+      fill
+    />
   </div>
 
-  {/* Square to complete the grid */}
   <div className="col-span-1 row-span-1">
-    <ImageModal src={seaside} alt="Gallery image" className="rounded-lg w-full h-full object-cover" loading="lazy" />
+    <ImageModal 
+      src={seaside} 
+      alt="Gallery image" 
+      className="rounded-lg w-full h-full object-cover"
+      loading="lazy"
+      fill
+    />
   </div>
 
-  {/* Fill gap 1 */}
   <div className="col-span-2 row-span-1">
-    <ImageModal src={jci} alt="Gallery image" className="rounded-lg w-full h-full object-cover" loading="lazy" />
+    <ImageModal 
+      src={jci} 
+      alt="Gallery image" 
+      className="rounded-lg w-full h-full object-cover"
+      loading="lazy"
+      fill
+    />
   </div>
 
-  {/* Fill gap 2 */}
   <div className="col-span-1 row-span-1">
-    <ImageModal src={museo2} alt="Gallery image" className="rounded-lg w-full h-full object-cover" loading="lazy" />
+    <ImageModal 
+      src={museo2} 
+      alt="Gallery image" 
+      className="rounded-lg w-full h-full object-cover"
+      loading="lazy"
+      fill
+    />
   </div>
 </div>
 

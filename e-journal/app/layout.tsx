@@ -25,7 +25,6 @@ export default function RootLayout({
       <body
         className='antialiased tracking-tight'
       >
-        <LenisProvider />
         <div className="mx-auto flex min-h-screen w-full max-w-4xl gap-12 px-8">
           <Nav menuLinks={menuItems} />
           <main className=" h-min w-full space-y-6 my-20">

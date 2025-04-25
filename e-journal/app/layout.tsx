@@ -5,7 +5,6 @@ import { unstable_ViewTransition as ViewTransition } from 'react';
 import { menuItems } from "@/app/menu-items";
 import Nav from "@/components/Nav";
 import NextPageButton from "@/components/ui/NextPageButton";
-import LenisProvider from './LenisProvider';
 
 const inter = Inter({ subsets: ['latin'] });
 
